@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>秒表</title>
+
+    <link rel="stylesheet" href="/static/style/timer.css">
+
+    <script type="text/javascript" src="/static/script/timer.js"></script>
+
+</head>
+
+<body>
+    <div id="option_container">
+        <div>
+            <input id="tick" type="text" readonly disabled value="00:00:00.000">
+        </div>
+
+        <div id="dummy_options">
+            <div class="video_options">
+                <div class="option_title">背景视频</div>
+                <input type="radio" id="video1" name="video" value="720p-30fps" onclick="document.play_video(this)">
+                <label for="video1">720p30</label>
+
+                <input type="radio" id="video2" name="video" value="1080p-60fps" onclick="document.play_video(this)">
+                <label for="video2">1080p60</label>
+
+                <input type="radio" id="video3" name="video" value="2160p-60fps" onclick="document.play_video(this)">
+                <label for="video3">2160p60</label>
+
+                <input type="button" id="video_stop" value="停止" onclick="document.play_video(this)" disabled>
+                <input type="button" id="video_play_pause" value="暂停" onclick="document.play_video(this)" disabled>
+            </div>
+        </div>
+
+        <div id="options">
+            <div class="scale_options">
+                <div class="option_title">大小</div>
+                <div class="font" id="size_sub" onclick="document.sub_font_size()">-</div>
+                <div class="font" id="size_value"></div>
+                <div class="font" id="size_add" onclick="document.add_font_size()">+</div>
+            </div>
+
+            <div class="hearbeat_options">
+                <div class="option_title">精度(毫秒)</div>
+                <input id="inverval" value="1">
+            </div>
+
+            <div class="play_options">
+                <input class="option" type="button" value="分割" onclick="document.split()">
+                <input class="option" type="button" value="从零分割" style="margin-right: 2em;" onclick="document.split_reset()">
+
+                <input id="play" class="option" type="button" value="开始" onclick="document.start_stop()">
+                <input class="option" type="button" value="重置" onclick="document.reset(false)">
+            </div>
+        </div>
+
+        <div>
+            <ul id="history">
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="player_container">
+        <video id="player" width="100%" controls playsinline disableRemotePlayback x-webkit-airplay="deny"
+            data-src-720p-30fps="Overwatch_Alive_Short_720p_30fps.mp4" data-type-720p-30fps="video/mp4"
+            data-src-1080p-60fps="Overwatch_Alive_Short_1080p_60fps.mp4" data-type-1080p-60fps="video/mp4"
+            data-src-2160p-60fps="Overwatch_Alive_Short_2160p_60fps.mp4" data-type-2160p-60fps="video/mp4">
+            <p>Your browser doesn't support HTML5 video</p>
+        </video>
+    </div>
+
+
+</body>
+
+</html>

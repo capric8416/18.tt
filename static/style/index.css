@@ -1,0 +1,51 @@
+* {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    flex-flow: row;
+    width: 5em;
+    height: 5em;
+    font-size: 2em;
+    margin: .5em;
+    cursor: pointer;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.box span {
+    font-size: .5em;
+}
+
+.line1 {
+    line-height: 5em;
+}
+
+.line2 {
+    line-height: 2.5em;
+}
+
+.line3 {
+    line-height: 1.66em;
+}
+
+.line4 {
+    line-height: 1.25em;
+}
+

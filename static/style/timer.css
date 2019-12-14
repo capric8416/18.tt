@@ -1,0 +1,158 @@
+* {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+}
+
+#tick {
+    width: 100%;
+    margin-top: .1em;
+    border: none;
+    font-size: 6em;
+    font-weight: bold;
+    font-family: Lucida Console, Courier New, Consolas;
+    text-align: center;
+    color: red;
+    background: transparent;
+}
+
+#dummy_options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.video_options {
+    display: inline-block;
+    font-size: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+    border: solid 1px lightgray;
+}
+
+.video_options div {
+    display: inline-block;
+}
+
+.video_options *:last-child,
+.scale_options *:last-child {
+    margin-right: 1em;
+}
+
+#options {
+    font-size: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.scale_options,
+.hearbeat_options,
+.play_options {
+    flex-direction: row;
+    margin: 0;
+    padding-right: 0;
+    border: solid 1px lightgray;
+}
+
+.scale_options,
+.hearbeat_options {
+    border-right: none;
+}
+
+.option {
+    font-size: 1em;
+    height: 1.5em;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .35);
+}
+
+#inverval {
+    border: none;
+    font-size: 1em;
+    width: 3em;
+    background-color: transparent;
+}
+
+.option_title {
+    display: inline-block;
+    margin-right: .2em;
+    font-size: 1em;
+    background: rgba(0, 0, 0, .075);
+}
+
+.font {
+    display: inline-block;
+    font-size: 1em;
+    width: 1em;
+    text-align: center;
+}
+
+#size_add,
+#size_sub,
+#width_add,
+#width_sub {
+    cursor: pointer;
+}
+
+.player_container {
+    text-align: center;
+}
+
+.video {
+    display: inline-block;
+    font-size: 1em;
+    margin: 0 0 .1em 0;
+    padding: .1em .2em .1em .2em;
+    border: none;
+    width: 10em;
+    cursor: pointer;
+}
+
+#player {
+    display: none;
+}
+
+#option_container {
+    z-index: 200;
+    position: absolute;
+    width: 100%;
+}
+
+.player_container {
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+}
+
+#video_stop,
+#video_play_pause {
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    height: 1.5em;
+    background-color: rgba(0, 0, 0, .35);
+}
+
+#history {
+    list-style: none;
+    font-size: 2em;
+    text-align: center;
+    margin: 1em 0 0 0;
+    padding: 0;
+}

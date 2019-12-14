@@ -1,0 +1,19 @@
+[Unit]
+Description=Web Server - 18.tt
+After=network.target
+
+[Service]
+Type=Simple
+User=root
+ExecStart=/home/pi/18.tt/env/bin/python /home/pi/18.tt/run.py
+ExecStop=/bin/kill -s SIGQUIT $MAINPID
+KillMode=process
+Restart=on-failure
+KillSignal=SIGQUIT
+TimeoutStopSec=10
+WorkingDirectory=/home/pi/18.tt
+
+[Install]
+WantedBy=multi-user.target
+
+
