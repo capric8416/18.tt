@@ -89,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function(){
         else {
             var prefix = window.location.hostname.length == 0 ? 'file:///D:/Downloads/' : '/static/video/';
             player.setAttribute('src', prefix + player.getAttribute('data-src-' + name));
-            player.setAttribute('type', prefix + player.getAttribute('data-type-' + name));
             player.style.display = 'inline-block';
             player.play();
             playing = true;
