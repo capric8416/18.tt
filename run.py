@@ -6,6 +6,7 @@ from aiohttp import web
 
 static = '/home/pi/18.tt/static'
 static_html = f'{static}/html'
+static_apps = f'{static}/apps'
 html_type = {'Content-Type': 'text/html'}
 
 
@@ -37,7 +38,8 @@ if __name__ == '__main__':
         web.get('/query/ip', ip),
         web.get('/tool/{name:.+}', tool),
         web.get('/play/{mode:.+?}/{name:.+}', play),
-        web.static('/static', static, show_index=False, follow_symlinks=False), 
+        web.static('/static', static, show_index=False, follow_symlinks=False),
+        web.static('/apps', static_apps, show_index=True, follow_symlinks=True),
     ])
 
     web.run_app(app, host='0.0.0.0', port=80)
